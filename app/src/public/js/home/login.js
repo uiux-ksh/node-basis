@@ -1,11 +1,11 @@
 "use strict"
-
+window.onload = function(){
 const id = document.querySelector('#id'),
       pwd =document.querySelector("#password"),
-      btn =document.querySelector("#btn");
+ loginBtn =document.querySelector(".btn");
 
 
-btn.addEventListener("click",login);
+loginBtn.addEventListener("click",login);
 
 function login() {
     const req ={
@@ -18,6 +18,9 @@ function login() {
        headers:{
            "Content-Type":"application/json",
        },
-       body:JSON.stringify(req)
-   })
+       body:JSON.stringify(req),
+   }).then((res) =>
+      res.json()).then(console.log);
+
+}
 }
