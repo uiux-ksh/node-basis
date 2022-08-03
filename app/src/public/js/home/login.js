@@ -2,7 +2,7 @@
 window.onload = function(){
 const id = document.querySelector('#id'),
       pwd =document.querySelector("#password"),
- loginBtn =document.querySelector(".btn");
+ loginBtn =document.querySelector("#btn");
 
 
 loginBtn.addEventListener("click",login);
